@@ -51,17 +51,17 @@ const HomeScreen = () => {
       {/* Header */}
       <View style={{ flexDirection: 'row', marginTop: 15, alignItems: 'center', paddingBottom: 3, paddingHorizontal: 13 }}>
         <Image
-          source={{ uri: 'https://links.papareact.com/wru' }}
+          source={require('../assets/mainlogo2.png')}
           style={{ height: 28, width: 28, backgroundColor: '#CCC', padding: 8, borderRadius: 14, marginRight: 7 }}
         />
         <View style={{ flex: 1 }}>
           <Text style={{ fontWeight: 'bold', color: '#666', fontSize: 12 }}>Savor Every Delivery!</Text>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Text style={{ fontWeight: 'bold', fontSize: 20 }}>Current Location</Text>
-            <ChevronDownIcon size={20} color="#00CCBB" style={{ marginLeft: 5 }} />
+            <ChevronDownIcon size={20} color="#0ecb64" style={{ marginLeft: 5 }} />
           </View>
         </View >
-        <UserIcon size={30} color="#00CCBB" py--9 />
+        <UserIcon size={30} color="#0ecb64" py--9 />
       </View>
 
       {/* Search */}
@@ -76,7 +76,7 @@ const HomeScreen = () => {
             onChangeText={setSearchQuery}
           />
         </View>
-        <AdjustmentsVerticalIcon size={24} color="#00CCBB" style={{ marginLeft: 10 }} />
+        <AdjustmentsVerticalIcon size={24} color="#0ecb64" style={{ marginLeft: 10 }} />
       </View>
 
       {/* Body */}

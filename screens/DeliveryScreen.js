@@ -20,7 +20,7 @@ const DeliveryScreen=()=> {
   //console.log(restaurant.long);
 
   return (
-    <View className="bg-[#00CCBB] flex-1">
+    <View className="bg-[#0ecb64] flex-1">
       <SafeAreaView className="z-50">
         <View  className="flex-row justify-between items-center p-7">
           <TouchableOpacity onPress={() => navigation.navigate("Home")}>
@@ -36,13 +36,11 @@ const DeliveryScreen=()=> {
               <Text className="text-4xl font-bold">45-55 Minutes</Text>
             </View>
             <Image
-              source={{
-                uri: "https://media1.giphy.com/media/gsr9MG7bDvSRWWSD1Y/200w.gif",
-              }}
+              source={require('../assets/time.gif')}
               className="h-20 w-20"
             />
           </View>
-          <Progress.Bar size={30} color="#00CCBB" indeterminate={true} />
+          <Progress.Bar size={30} color="#0ecb64" indeterminate={true} />
         </View>
       </SafeAreaView>
       <MapView
@@ -63,21 +61,19 @@ const DeliveryScreen=()=> {
           title={restaurant.title}
           description={restaurant.short_description}
           identifier="origin"
-          pinColor="#00CCBB"
+          pinColor="#0ecb64"
         />
       </MapView>
       <SafeAreaView className="bg-white flex-row items-center space-x-5 h-28">
         <Image
-          source={{
-            uri: "https://pbs.twimg.com/media/EGIeHV4WoAA_qE6.jpg",
-          }}
-          className="h-12 w-12 bg-gray-300 p-4 rounded-full ml-5"
+          source={require('../assets/rider.gif')}
+          className="h-12 w-12 bg-gray-300 p-7 rounded-full ml-5"
         />
         <View className="flex-1">
           <Text className="text-lg">Shadab Tanjeed</Text>
           <Text className="text-gray-400">Your Rider</Text>
         </View>
-        <Text style={{ color: '#00CCBB', fontSize: 18, marginRight: 10 }}className="text-[#00CCBB] text-lg mr">Call</Text>
+        <Text style={{ color: '#0ecb64', fontSize: 18, marginRight: 10 }}className="text-[#0ecb64] text-lg mr">Call</Text>
       </SafeAreaView>
     </View>
   );

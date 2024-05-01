@@ -19,9 +19,9 @@ export default function BasketIcon() {
     <View className="absolute bottom-10 w-full z-50">
       <TouchableOpacity
         onPress={() => navigation.navigate("Basket")}
-        className="mx-5 bg-[#00CCBB] p-2 rounded-lg flex-row" // Adjusted padding here
+        className="mx-5 bg-[#0ecb64] p-2 rounded-lg flex-row" // Adjusted padding here
       >
-        <Text className="text-white font-extrabold text-lg bg-[#01A296] py-2 px-2 rounded-full">
+        <Text className="text-white font-extrabold text-lg bg-[#0a914b] py-2 px-2 rounded-full">
           {items.length}
         </Text>
         <Text className="flex-1 text-white font-extrabold text-lg text-center py-2">

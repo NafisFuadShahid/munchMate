@@ -14,9 +14,9 @@ export default function PreparingOrderScreen() {
   }, []);
 
   return (
-    <SafeAreaView className="bg-[#00CCBB] flex-1 justify-center items-center">
+    <SafeAreaView className="bg-[#0ecb64] flex-1 justify-center items-center">
       <Animatable.Image
-        source={require("../assets/orderLoding.gif")}
+        source={require("../assets/giphy.gif")}
         animation="slideInUp"
         iterationCount={1}
         className="h-96 w-96"
@@ -25,6 +25,7 @@ export default function PreparingOrderScreen() {
         animation="slideInUp"
         iterationCount={1}
         className="text-lg my-10 text-white font-bold text-center"
+        style={{ paddingHorizontal: 20 }} // Adjust the padding value as needed
       >
         Waiting for Restaurant to accept your order!
       </Animatable.Text>

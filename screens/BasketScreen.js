@@ -28,14 +28,14 @@ const BasketScreen = () => {
     <SafeAreaView style={{ flex: 1 }}>
       {/* Scrollable Content */}
       <ScrollView className="bg-gray-100 flex-1">
-        <View className="p-5 border-b border-[#00CCBB] bg-white shadow-xs">
+        <View className="p-5 border-b border-[#0ecb64] bg-white shadow-xs">
           <Text className="text-lg font-bold text-center">Basket</Text>
           <Text className="text-center text-gray-400">{restaurant.title}</Text>
           <TouchableOpacity
             onPress={navigation.goBack}
             className="rounded-full bg-gray-100 absolute top-3 right-5"
           >
-            <XCircleIcon color="#00CCBB" height={50} width={50} />
+            <XCircleIcon color="#0ecb64" height={50} width={50} />
           </TouchableOpacity>
         </View>
         <View className="flex-row items-center space-x-4 px-4 py-3 bg-white my-5">
@@ -44,19 +44,19 @@ const BasketScreen = () => {
           />
           <Text className="flex-1">Deliver in 50-70 min</Text>
           <TouchableOpacity>
-            <Text className="text-[#00CCBB]">Change</Text>
+            <Text className="text-[#0ecb64]">Change</Text>
           </TouchableOpacity>
         </View>
         {Object.entries(groupItemsInBucket).map(([key, items]) => (
           <View key={key} className="flex-row items-center space-x-3 bg-white py-2 px-5">
-            <Text className="text-[#00CCBB]">{items.length} x</Text>
+            <Text className="text-[#0ecb64]">{items.length} x</Text>
             <Image source={{ uri: urlFor(items[0]?.image).url() }}
               className="h-12 w-12 rounded-full"
             />
             <Text className="flex-1">{items[0]?.name}</Text>
             <Text className="text-gray-600">{items[0]?.price} BDT</Text>
             <TouchableOpacity onPress={() => dispatch(removeFromBasket({ id: key }))}>
-              <Text className="text-[#00CCBB] text-xs">Remove</Text>
+              <Text className="text-[#FF0000] text-xs">Remove</Text>
             </TouchableOpacity>
           </View>
         ))}
@@ -77,7 +77,7 @@ const BasketScreen = () => {
         </View>
         <TouchableOpacity
           onPress={() => navigation.navigate("PreparingOrderScreen")}
-          className="rounded-lg bg-[#00CCBB] p-4"
+          className="rounded-lg bg-[#0ecb64] p-4"
         >
           <Text className="text-center text-white text-lg font-bold">
             Place Order

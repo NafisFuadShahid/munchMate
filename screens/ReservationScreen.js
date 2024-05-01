@@ -30,35 +30,35 @@ const ReservationScreen = () => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#00CCBB' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
       <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 20, paddingTop: 20 }}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-          <XCircleIcon color="white" size={35} />
+          <XCircleIcon color="black" size={35} />
         </TouchableOpacity>
-        <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold', marginLeft: 10 }}>Reservation</Text>
+        <Text style={{ color: 'black', fontSize: 20, fontWeight: 'bold', marginLeft: 10 }}>Reservation</Text>
       </View>
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', paddingHorizontal: 20 }}>
         <Image
           source={reservationImage}
           style={{ width: 200, height: 200, borderRadius: 100, marginBottom: 20 }}
         />
-        <Text style={{ color: 'white', fontSize: 24, fontWeight: 'bold', textAlign: 'center', marginBottom: 10 }}>Make a Reservation</Text>
-        <Text style={{ color: 'white', fontSize: 16, textAlign: 'center', marginHorizontal: 20, marginBottom: 20 }}>
+        <Text style={{ color: 'black', fontSize: 24, fontWeight: 'bold', textAlign: 'center', marginBottom: 10 }}>Make a Reservation</Text>
+        <Text style={{ color: 'black', fontSize: 16, textAlign: 'center', marginHorizontal: 20, marginBottom: 20 }}>
           Discover culinary delights and exceptional service at our restaurant. Indulge in a range of flavors from start to finish. Join us for an unforgettable dining experience.
         </Text>
         <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 20 }}>
           <TouchableOpacity onPress={handleDecrement}>
-            <MinusCircleIcon color="white" size={30} />
+            <MinusCircleIcon color="black" size={30} />
           </TouchableOpacity>
-          <Text style={{ color: 'white', fontSize: 20, marginHorizontal: 10 }}>{numberOfPeople}</Text>
+          <Text style={{ color: 'black', fontSize: 20, marginHorizontal: 10 }}>{numberOfPeople}</Text>
           <TouchableOpacity onPress={handleIncrement}>
-            <PlusCircleIcon color="white" size={30} />
+            <PlusCircleIcon color="black" size={30} />
           </TouchableOpacity>
         </View>
         {/* Name Input Bar */}
         <TextInput
           placeholder="Your Name"
-          placeholderTextColor="rgba(255,255,255,0.7)"
+          placeholderTextColor="gray"
           style={styles.input}
           value={customerName}
           onChangeText={setCustomerName}
@@ -78,20 +78,20 @@ const styles = StyleSheet.create({
   input: {
     height: 40,
     width: '80%',
-    backgroundColor: 'rgba(255,255,255,0.3)',
+    backgroundColor: '#E0E0E1',
     marginBottom: 20,
-    color: 'white',
+    color: 'black',
     paddingHorizontal: 10,
     borderRadius: 8,
   },
   bookButton: {
-    backgroundColor: 'white',
+    backgroundColor: 'black',
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 8,
   },
   bookButtonText: {
-    color: '#00CCBB',
+    color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
   },
