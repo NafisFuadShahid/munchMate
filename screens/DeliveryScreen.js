@@ -66,7 +66,7 @@ const DeliveryScreen=()=> {
       </MapView>
       <SafeAreaView className="bg-white flex-row items-center space-x-5 h-28">
         <Image
-          source={require('../assets/rider.gif')}
+          source={require('../assets/kalorider.jpg')}
           className="h-12 w-12 bg-gray-300 p-7 rounded-full ml-5"
         />
         <View className="flex-1">
