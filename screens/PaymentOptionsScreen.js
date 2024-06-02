@@ -8,9 +8,12 @@ const PaymentOptionsScreen = () => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.iconButton} onPress={() => navigation.goBack()}>
-        <XCircleIcon size={50} color="#0ecb64" style={styles.icon} />
-      </TouchableOpacity>
+      <TouchableOpacity
+            onPress={navigation.goBack}
+            className="rounded-full bg-gray-100 absolute top-8 right-3"
+          >
+            <XCircleIcon color="#0ecb64" height={50} width={50} />
+          </TouchableOpacity>
 
       <Text style={styles.title}>Choose Payment Method</Text>
 
@@ -41,12 +44,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 40,
     left: 20,
-  },
-  icon: {
-    borderWidth: 2,
-    borderColor: '#0ecb64',
-    borderRadius: 25,
-    padding: 10,
   },
   title: {
     fontSize: 24,

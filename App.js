@@ -11,6 +11,8 @@ import BasketScreen from './screens/BasketScreen';
 import PreparingOrderScreen from './screens/PreparingOrderScreen';
 import DeliveryScreen from './screens/DeliveryScreen';
 import ReservationScreen from './screens/ReservationScreen';
+import PaymentOptionsScreen from './screens/PaymentOptionsScreen';
+import OnlinePaymentScreen from './screens/OnlinePaymentScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -36,6 +38,16 @@ export default function App() {
               name="PreparingOrderScreen"
               component={PreparingOrderScreen}
               options={{ presentation: "fullScreenModal", headerShown: false }}
+            />
+            <Stack.Screen
+              name="PaymentOptionsScreen"
+              component={PaymentOptionsScreen}
+              options={{ presentation: "modal", headerShown: false }}
+            />
+            <Stack.Screen
+              name="OnlinePaymentScreen"
+              component={OnlinePaymentScreen}
+              options={{ presentation: "modal", headerShown: false }}
             />
             <Stack.Screen
               name="Delivery"
