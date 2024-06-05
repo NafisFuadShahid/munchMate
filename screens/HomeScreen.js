@@ -1,11 +1,9 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react';
-import { View, Text, SafeAreaView, Image, TextInput, ScrollView } from 'react-native';
+import { View, Text, SafeAreaView, Image, TextInput, ScrollView, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { ChevronDownIcon, UserIcon, MagnifyingGlassIcon, AdjustmentsVerticalIcon } from 'react-native-heroicons/solid';
 import Categories from '../components/Categories';
 import FeaturedRow from '../components/FeaturedRow';
-import CategoryCard from '../components/CategoryCard';
-import RestaurantCard from '../components/RestaurantCard';
 import sanityClient from "../sanity";
 
 const HomeScreen = () => {
@@ -13,6 +11,7 @@ const HomeScreen = () => {
   const [featuredCategories, setFeaturedCategories] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+  const [showLogout, setShowLogout] = useState(false);
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -46,6 +45,12 @@ const HomeScreen = () => {
     setFilteredRestaurants(filtered);
   }, [searchQuery, featuredCategories]);
 
+  const handleLogout = () => {
+    // Perform logout actions here
+    // For now, just navigate back to the login screen
+    navigation.navigate('Login');
+  };
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: 'white', paddingTop: 20 }}>
       {/* Header */}
@@ -60,9 +65,20 @@ const HomeScreen = () => {
             <Text style={{ fontWeight: 'bold', fontSize: 20 }}>Current Location</Text>
             <ChevronDownIcon size={20} color="#0ecb64" style={{ marginLeft: 5 }} />
           </View>
-        </View >
-        <UserIcon size={30} color="#0ecb64" py--9 />
+        </View>
+        <TouchableOpacity onPress={() => setShowLogout(!showLogout)}>
+          <UserIcon size={30} color="#0ecb64" />
+        </TouchableOpacity>
       </View>
+
+      {/* Logout Bar */}
+      {showLogout && (
+        <View style={{ paddingHorizontal: 13, paddingVertical: 10 }}>
+          <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 10 }} onPress={handleLogout}>
+            <Text style={{ fontWeight: 'bold', fontSize: 16, color: '#333', marginRight: 10 }}>Logout</Text>
+          </TouchableOpacity>
+        </View>
+      )}
 
       {/* Search */}
       <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 13, paddingBottom: 10 }}>

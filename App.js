@@ -13,6 +13,8 @@ import DeliveryScreen from './screens/DeliveryScreen';
 import ReservationScreen from './screens/ReservationScreen';
 import PaymentOptionsScreen from './screens/PaymentOptionsScreen';
 import OnlinePaymentScreen from './screens/OnlinePaymentScreen';
+import LoginScreen from './screens/LoginScreen';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +24,7 @@ export default function App() {
       <Provider store={store}>
         <TailwindProvider>
           <Stack.Navigator>
+          <Stack.Screen options={{ headerShown: false }} name="Login" component={LoginScreen} />
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Restaurant" component={RestaurantScreen} />
             <Stack.Screen
