@@ -60,4 +60,4 @@ npx expo start
 
 # Contact
 
-You can find me on Facebook [Nafis Fuad Shahid](https://www.facebook.com/nafis.fuad.169)
+You can find me on [Facebook](https://www.facebook.com/nafis.fuad.169) or [Linkedin](https://www.linkedin.com/in/nafis-fuad-shahid-b75740221/)
