@@ -18,12 +18,11 @@ MunchMate is a comprehensive food delivery and reservation system designed to br
   <img src="https://github.com/NafisFuadShahid/munchMate/blob/master/assets/AppPhotos/s1.jpg?raw=true" width="30%" />
   <img src="https://github.com/NafisFuadShahid/munchMate/blob/master/assets/AppPhotos/s3.jpg?raw=true" width="30%" />
   <img src="https://github.com/NafisFuadShahid/munchMate/blob/master/assets/AppPhotos/s5.jpg?raw=true" width="30%" />
-</p>
-<p align="center">
   <img src="https://github.com/NafisFuadShahid/munchMate/blob/master/assets/AppPhotos/s4.jpg?raw=true" width="30%" />
   <img src="https://github.com/NafisFuadShahid/munchMate/blob/master/assets/AppPhotos/s2.jpg?raw=true" width="30%" />
   <img src="https://github.com/NafisFuadShahid/munchMate/blob/master/assets/AppPhotos/s6.jpg?raw=true" width="30%" />
 </p>
+
 
 
 
