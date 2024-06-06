@@ -1,3 +1,7 @@
+# MunchMate
+
+**Bringing your favorite dishes to your doorstep with an integrated reservation system.**
+
 # Table of Contents
 
 - [About the Project](#about-the-project)
